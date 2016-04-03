@@ -1,6 +1,6 @@
 # Cook Book
 ## Introduction
-The script run_analysis.R performs the 5 steps described in the course project's definition. In particular:
+The script run_analysis.R performs the steps described to deliver the project requirements. In particular:
 
 1) All files having the same number of columns and referring to the same entities are merged using the rbind() function.
 
