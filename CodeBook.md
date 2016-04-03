@@ -12,6 +12,8 @@ The script run_analysis.R performs the steps described to deliver the project re
 ### Additional Notes:
 The rest of the columns in the dataset contain values of averages of mean and averages of standard deviation of individual features contained in original dataset for each "Subject" and "Activity".
 
+Original column names denoting features has been modified to match the overall naming scheme of the dataset in order to fulfill tidy data requirements.
+
 ## Variables
 
 #### 1) x_train, y_train, x_test, y_test, subject_train and subject_test contain the data from the downloaded files:
