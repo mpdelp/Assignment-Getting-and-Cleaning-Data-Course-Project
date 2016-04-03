@@ -48,7 +48,7 @@ x_data <- x_data[, mean_and_std_features]
 
 names(x_data) <- features[mean_and_std_features, 2]
 
-#### 4) A similar approach is taken with activity names through the activities variable.
+#### 4a) A similar approach is taken with activity names through the activities variable.
 
 activities <- read.table("activity_labels.txt")
 
@@ -56,10 +56,10 @@ y_data[, 1] <- activities[y_data[, 1], 2]
 
 names(y_data) <- "activity"
 
-#### 5) all_data merges x_data, y_data and subject_data in a big dataset.
+#### 4b) all_data merges x_data, y_data and subject_data in a big dataset.
 
 all_data <- cbind(x_data, y_data, subject_data)
 
-#### 6) Finally, averages_data contains the relevant averages which will be later stored in a .txt file. ddply() from the plyr package is used to apply colMeans() and ease the development.
+#### 5) Finally, averages_data contains the relevant averages which will be later stored in a .txt file. ddply() from the plyr package is used to apply colMeans() and ease the development.
 
 averages_data <- ddply(all_data, .(subject, activity), function(x) colMeans(x[, 1:66]))
