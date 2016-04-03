@@ -38,7 +38,7 @@ y_data <- rbind(y_train, y_test)
 
 subject_data <- rbind(subject_train, subject_test)
 
-#### 3) features contains the correct names for the x_data dataset, which are applied to the column names stored in mean_and_std_features, a numeric vector used to extract the desired data.
+#### 3a) features contains the correct names for the x_data dataset, which are applied to the column names stored in mean_and_std_features, a numeric vector used to extract the desired data.
  
 features <- read.table("features.txt")
 
@@ -48,7 +48,7 @@ x_data <- x_data[, mean_and_std_features]
 
 names(x_data) <- features[mean_and_std_features, 2]
 
-#### 4a) A similar approach is taken with activity names through the activities variable.
+#### 3b) A similar approach is taken with activity names through the activities variable.
 
 activities <- read.table("activity_labels.txt")
 
@@ -56,7 +56,7 @@ y_data[, 1] <- activities[y_data[, 1], 2]
 
 names(y_data) <- "activity"
 
-#### 4b) all_data merges x_data, y_data and subject_data in a big dataset.
+#### 4) all_data merges x_data, y_data and subject_data in a big dataset.
 
 all_data <- cbind(x_data, y_data, subject_data)
 
