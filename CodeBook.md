@@ -14,7 +14,7 @@ The script run_analysis.R performs the steps described to deliver the project re
 
 6) A new dataset with all the average measurements is created for each of the 30 subjects and 6 activity types and stored in a file called averages_data.txt, as per the project requirements.
 
-## Additional Notes:
+### Additional Notes:
 The rest of the columns in the dataset contain values of averages of mean and averages of standard deviation of individual features contained in original dataset for each "Subject" and "Activity".
 
 ## Variables
